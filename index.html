@@ -256,6 +256,12 @@
         canvas.width = isMobile ? 500 : 800;
         canvas.height = isMobile ? 400 : 500;
 
+        // Debug: Draw a test rectangle to confirm canvas works
+        ctx.fillStyle = '#FF0000';
+        ctx.fillRect(10, 10, 50, 50);
+        ctx.fillStyle = '#00FF00';
+        ctx.fillText('Canvas loaded!', 70, 40);
+
         // Game state
         let score = 0;
         let currentLevel = 1;
