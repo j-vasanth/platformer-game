@@ -310,7 +310,7 @@
                     { x: 720, y: 80, collected: false }
                 ],
                 goal: { x: 700, y: 80, width: 40, height: 40 },
-                startPos: { x: 50, y: 350 }
+                startPos: { x: 50, y: 400 }  // Spawn on ground platform (y=400 = 450-50 player height)
             },
             {
                 platforms: [
@@ -334,7 +334,7 @@
                     { x: 580, y: 110, collected: false }
                 ],
                 goal: { x: 710, y: 160, width: 40, height: 40 },
-                startPos: { x: 50, y: 350 }
+                startPos: { x: 50, y: 400 }
             },
             {
                 platforms: [
@@ -651,6 +651,11 @@ document.addEventListener('keyup', (e) => {
         }
 
         function drawPlayer() {
+            // Debug: Draw player bounding box
+            ctx.strokeStyle = '#FF0000';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(player.x, player.y, player.width, player.height);
+
             const x = player.x;
             const y = player.y;
             const w = player.width;
