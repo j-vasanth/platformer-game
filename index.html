@@ -395,7 +395,7 @@
             }
         });
 
-Listener('keyup        document.addEvent', (e) => {
+document.addEventListener('keyup', (e) => {
             if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
             if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
             if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W' || e.key === ' ') keys.jump = false;
